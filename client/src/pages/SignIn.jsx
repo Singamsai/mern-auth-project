@@ -76,7 +76,7 @@ export default function SignIn() {
         </Link>
       </div>
       <p className="text-red-700">
-        {error ? error.message : "something went wrong! try again"}
+        {error ? error.message || "something went wrong! try again" : ""}
       </p>
     </div>
   );
