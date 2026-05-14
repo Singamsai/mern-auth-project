@@ -12,12 +12,16 @@ export default function Header() {
 
         {/* Right Side */}
         <ul className="flex gap-6 text-lg font-medium">
-          <Link to="/">
-            <li className="hover:text-blue-600">Home</li>
-          </Link>
-          <Link to="/about">
-            <li className="hover:text-blue-600">About</li>
-          </Link>
+          {currentUser ? (
+            <Link to="/">
+              <li className="hover:text-blue-600">Home</li>
+            </Link>
+          ) : null}
+          {currentUser ? (
+            <Link to="/about">
+              <li className="hover:text-blue-600">About</li>
+            </Link>
+          ) : null}
           {currentUser ? null : (
             <Link to="/signup">
               <li className="hover:text-blue-600">SignUp</li>
